@@ -15,23 +15,23 @@ AccountManagerApplication
 
 ## Available API
 ### Get Account Balance request example
-####http://localhost:8080/accounts/12345678/balance
+### http://localhost:8080/accounts/12345678/balance
 
-###response example:
+### response example:
 {
 "acctNumber": "12345678",
 "balance": 995000.0
 }
 
 ### Create Account Transfer request example
-####http://localhost:8080/accounts/transfer
+### http://localhost:8080/accounts/transfer
 {
     "fromAcctNumber": "12345678",
     "toAcctNumber": "88888888",
     "amount": 5000.0
 }
 
-###response example:
+### response example:
 {
 "message": "The transfer was successful"
 }
