@@ -45,7 +45,7 @@ public class AccountControllerTest {
     void should_be_able_to_get_account_balance_test() throws Exception {
         this.mockMvc.perform(get("/accounts/12345678/balance"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("{\"acctNumber\":\"12345678\",\"balance\":1000000.0}"));
+                .andExpect(content().string("{\"acctNumber\":\"12345678\",\"balance\":1000000.0,\"currency\":\"HKD\"}"));
     }
 
     @Test
@@ -70,11 +70,11 @@ public class AccountControllerTest {
 
         this.mockMvc.perform(get("/accounts/12345678/balance"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("{\"acctNumber\":\"12345678\",\"balance\":995000.0}"));
+                .andExpect(content().string("{\"acctNumber\":\"12345678\",\"balance\":995000.0,\"currency\":\"HKD\"}"));
 
         this.mockMvc.perform(get("/accounts/88888888/balance"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("{\"acctNumber\":\"88888888\",\"balance\":1005000.0}"));
+                .andExpect(content().string("{\"acctNumber\":\"88888888\",\"balance\":1005000.0,\"currency\":\"HKD\"}"));
     }
 
     @Test
@@ -92,11 +92,11 @@ public class AccountControllerTest {
 
         this.mockMvc.perform(get("/accounts/12345678/balance"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("{\"acctNumber\":\"12345678\",\"balance\":1000000.0}"));
+                .andExpect(content().string("{\"acctNumber\":\"12345678\",\"balance\":1000000.0,\"currency\":\"HKD\"}"));
 
         this.mockMvc.perform(get("/accounts/88888888/balance"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("{\"acctNumber\":\"88888888\",\"balance\":1000000.0}"));
+                .andExpect(content().string("{\"acctNumber\":\"88888888\",\"balance\":1000000.0,\"currency\":\"HKD\"}"));
     }
 
     private String asJsonString(final Object obj) {

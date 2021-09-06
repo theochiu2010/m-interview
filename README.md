@@ -20,7 +20,8 @@ AccountManagerApplication
 ### response example:
 {
 "acctNumber": "12345678",
-"balance": 995000.0
+"balance": 995000.0,
+"currency":"HKD"
 }
 
 ### Create Account Transfer request example

@@ -20,7 +20,7 @@ public class AccountServiceImpl implements AccountService {
 
         Double balance = account.getBalance();
 
-        return new AccountBalanceDto(acctNumber, balance);
+        return new AccountBalanceDto(acctNumber, balance, account.getCurrency());
     }
 
     @Override
